@@ -43,6 +43,6 @@ extern "C" {
 }
 #endif
 
-#endif /* APP_UTILS_H_ */
+#endif /* APP_THREADS_H_ */
 
 /************************ (C) COPYRIGHT InnoTeknoloji *****END OF FILE****/

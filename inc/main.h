@@ -13,33 +13,30 @@
  */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef APP_UTILS_H_
-#define APP_UTILS_H_
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-/* Exported types ------------------------------------------------------------*/
-/* Exported constants --------------------------------------------------------*/
-//WDT flags values
-#define ALIVE						1
-#define ASLEEP						2
-#define UNKNOWN						0
+#ifndef MAIN_H_
+#define MAIN_H_
 
 /* Includes ------------------------------------------------------------------*/
+#include "mbed.h"
+
+
+/* Exported types ------------------------------------------------------------*/
+/* Exported constants --------------------------------------------------------*/
+//Communication timeout defines
+#define CONNECTION_OK_LED_BLINK_TIMEOUT						5000ms
+
 
 /* Exported macro ------------------------------------------------------------*/
 
 /* Exported functions ------------------------------------------------------- */
-void drive_status_led();
+extern DigitalOut led_1;
+extern DigitalOut led_2;
+extern DigitalOut led_3;
 
 
 
 
 
 
-#ifdef __cplusplus
-}
-#endif
 
-#endif /* APP_UTILS_H_ */
+#endif /* MAIN_H_ */

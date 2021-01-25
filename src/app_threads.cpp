@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "mbed.h"
 #include "app_utils.h"
+#include "main.h"
 /* Private includes ----------------------------------------------------------*/
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -34,14 +35,17 @@ volatile uint8_t mbus_usart_ll_thread_thread_state_flag = UNKNOWN;
 volatile uint8_t app_mbus_thread_thread_state_flag = UNKNOWN;
 
 /* Private function prototypes -----------------------------------------------*/
+
 /* Private user code ---------------------------------------------------------*/
 
 void app_controller_thread(void) {
-    while(1){
-        app_controller_thread_state_flag = ALIVE;
-        
-    }    
 
+    while(true){
+
+        app_controller_thread_state_flag = ASLEEP;
+        ThisThread::sleep_for(500ms);
+        app_controller_thread_state_flag = ALIVE;
+    }    
 }
 
 /************************ (C) COPYRIGHT InnoTeknoloji *****END OF FILE****/
