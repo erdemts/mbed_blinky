@@ -4,6 +4,7 @@
  */
 
 #include "mbed.h"
+#include "app_utils.h"
 
 // Blinking rate in milliseconds
 #define BLINKING_RATE 1000ms
@@ -34,6 +35,7 @@ int main() {
   while (true) {
     led_2 = !led_2;
     led_3 = !led_3;
+    print_test();
     ThisThread::sleep_for(BLINKING_RATE);
   }
 }
