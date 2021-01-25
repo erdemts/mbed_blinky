@@ -6,7 +6,7 @@
 #include "mbed.h"
 
 // Blinking rate in milliseconds
-#define BLINKING_RATE 500ms
+#define BLINKING_RATE 1000ms
 static UnbufferedSerial usart_2(PD_5, PD_6, 115200);
 
 // Initialise leds
