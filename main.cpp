@@ -35,6 +35,5 @@ int main() {
     led_2 = !led_2;
     led_3 = !led_3;
     ThisThread::sleep_for(BLINKING_RATE);
-    //
   }
 }
